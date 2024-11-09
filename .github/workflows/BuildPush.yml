@@ -7,7 +7,7 @@ on:
 
 jobs:
   run-github-actions:
-    runs-on: ubuntu-lastrest
+    runs-on: ubuntu-lastest
     steps:
       - name: checkout
         uses: actions/checkout@v1
