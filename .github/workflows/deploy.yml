@@ -18,3 +18,10 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
       - run: docker image build -t dhiadbh/simplewebprod:prod .
       - run: docker image push dhiadbh/simplewebprod:prod
+      - name: Deploy App Render Container
+        uses: gh-actions-workflows/deploy-docker-render@v1.1
+        with:
+          deploy-hook: ${{secrets.RENDER_DEPLOY_HOOK}}
+          image-url: dhiadbh/simplewebdev:latest
+          render-api-key: ${{secrets.RENDER_API_KEY}}
+          wait-for-deployment: true
