@@ -23,5 +23,5 @@ jobs:
         with:
           deploy-hook: ${{secrets.RENDER_DEPLOY_HOOK}}
           image-url: dhiadbh/simplewebdev:latest
-          render-api-key: ${{secrets.RENDER_API_KEY}}
+          render-api-key: ${{secrets.RENDER_API_HOOK}}
           wait-for-deployment: true
